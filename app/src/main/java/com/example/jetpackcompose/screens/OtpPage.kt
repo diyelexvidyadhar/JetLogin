@@ -16,13 +16,11 @@ import com.example.jetpackcompose.ui.theme.lightPrimary
 
 @Composable
 fun OtpPage(navController: NavController,modifier : Modifier = Modifier){
-    Surface(modifier = Modifier
-        .fillMaxSize()
-        .padding(15.dp)) {
         Column(
             modifier = modifier
                 .fillMaxWidth()
                 .fillMaxWidth(fraction = .50f)
+                .padding(15.dp)
 
         ) {
             Text(
@@ -48,7 +46,7 @@ fun OtpPage(navController: NavController,modifier : Modifier = Modifier){
 
     }
 
-}
+
 
 @Preview(showBackground = true)
 @Composable
