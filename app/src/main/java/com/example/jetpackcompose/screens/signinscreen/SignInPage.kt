@@ -51,6 +51,8 @@ fun SignInPage(viewModel: SignInViewModel = viewModel(), navController: NavContr
             fontSize = MaterialTheme.typography.h3.fontSize
         )
         BodySection(
+            modifier = Modifier.fillMaxWidth()
+                .padding(vertical = 8.dp),
             userEmail = viewModel.email,
             onEmailChange = { viewModel.signIn(userEmail = it) },
             userPassword = viewModel.password,
@@ -78,8 +80,7 @@ fun BodySection(
 
 ) {
     Column(
-        modifier = modifier.fillMaxWidth()
-            .padding(vertical = 8.dp),
+        modifier = modifier,
         verticalArrangement = Arrangement.SpaceBetween
     ) {
         CustomTextField(
